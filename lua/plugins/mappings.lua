@@ -26,35 +26,4 @@ return {
       },
     },
   },
-  {
-    "AstroNvim/astrolsp",
-    ---@type AstroLSPOpts
-    opts = {
-      -- mappings to be set up on attaching of a language server
-      mappings = {
-        n = {
-          -- Header/source switching for C/C++
-          ["<LocalLeader>s"] = {
-            desc = "hpp ↔ cpp",
-          },
-          ["<LocalLeader>ss"] = {
-            ":ClangdSwitchSourceHeader<CR>",
-            desc = "Switch inplace",
-            cond = function(_, bufnr)
-              local filetype = vim.bo[bufnr].filetype
-              return filetype == "cpp" or filetype == "c"
-            end,
-          },
-          ["<LocalLeader>sv"] = {
-            ":vsplit<CR>:ClangdSwitchSourceHeader<CR>",
-            desc = "Switch with split",
-            cond = function(_, bufnr)
-              local filetype = vim.bo[bufnr].filetype
-              return filetype == "cpp" or filetype == "c"
-            end,
-          },
-        },
-      },
-    },
-  },
 }
