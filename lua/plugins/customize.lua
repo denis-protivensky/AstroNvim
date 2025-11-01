@@ -1,10 +1,14 @@
+local function switch_locale()
+  local key = vim.api.nvim_replace_termcodes("<C-^>", true, false, true)
+  vim.api.nvim_feedkeys(key, 'n', false)
+end
+
 ---@type LazySpec
 return {
   {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {
-      -- Mappings can be configured through AstroCore as well.
       -- NOTE: keycodes follow the casing in the vimdocs. For example, `<Leader>` must be capitalized
       mappings = {
         -- first key is the mode
@@ -22,6 +26,18 @@ return {
 
           -- setting a mapping to false will disable it
           -- ["<C-S>"] = false,
+        },
+        i = {
+          ["<Leader><Leader>S"] = {
+            switch_locale,
+            desc = "Switch locale (keymap)",
+          },
+        },
+        c = {
+          ["<Leader><Leader>S"] = {
+            switch_locale,
+            desc = "Switch locale (keymap)",
+          },
         },
       },
     },

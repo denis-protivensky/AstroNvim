@@ -1,5 +1,10 @@
-if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+local opt = vim.opt
 
--- This will run last in the setup process.
--- This is just pure lua so anything that doesn't
--- fit in the normal config locations above can go here
+-- configure spelling and locales
+-- NOTE: don't use astrocore options as the order of plugins is
+-- non-deterministic so the options may be overridden later
+opt.spelllang = { "en", "ru" }
+opt.spell = true
+opt.keymap = "russian-jcukenwin"
+opt.iminsert = 0
+opt.imsearch = 0
