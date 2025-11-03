@@ -19,6 +19,10 @@ return {
             "i<CR><Esc>",
             desc = "Split lines under cursor",
           },
+          ["<Leader>bo"] = {
+            ":silent! only<CR>",
+            desc = "Keep the only window buffer",
+          },
 
           -- tables with just a `desc` key will be registered with which-key if it's installed
           -- this is useful for naming menus
