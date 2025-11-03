@@ -1,6 +1,8 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+  { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.pack.cmake" },
   { import = "astrocommunity.pack.cpp" },
   -- FIXME: Wait until the warning is fixed:
