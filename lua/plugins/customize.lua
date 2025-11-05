@@ -15,7 +15,8 @@ return {
         n = {
           -- second key is the lefthand side of the map
 
-          ["gs"] = {
+          -- overwrite S (split) to be a companion pair to J (join)
+          ["S"] = {
             "i<CR><Esc>",
             desc = "Split lines under cursor",
           },
