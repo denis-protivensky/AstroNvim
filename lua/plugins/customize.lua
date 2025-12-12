@@ -37,9 +37,17 @@ return {
             switch_locale,
             desc = "Switch locale (keymap)",
           },
+          ["<Leader><Leader>s"] = {
+            switch_locale,
+            desc = "Switch locale (keymap)",
+          },
         },
         c = {
           ["<Leader><Leader>S"] = {
+            switch_locale,
+            desc = "Switch locale (keymap)",
+          },
+          ["<Leader><Leader>s"] = {
             switch_locale,
             desc = "Switch locale (keymap)",
           },

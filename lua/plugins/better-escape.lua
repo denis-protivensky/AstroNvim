@@ -7,6 +7,9 @@ return {
           q = {
             q = "<Esc>",
           },
+          й = {
+            й = "<Esc>",
+          },
           j = {
             j = false,
             k = false,
